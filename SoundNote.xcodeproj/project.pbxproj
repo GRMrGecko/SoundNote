@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2A88CAFE130B066C0062A126 /* Build Directory */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A88CAFF130B066C0062A126 /* Build configuration list for PBXAggregateTarget "Build Directory" */;
+			buildPhases = (
+				2A88CB02130B067A0062A126 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build Directory";
+			productName = "Build Directory";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2A1BE327130D565400D5EB2C /* disabled.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE326130D565400D5EB2C /* disabled.plist */; };
+		2A1BE329130D577800D5EB2C /* growl.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE328130D577800D5EB2C /* growl.plist */; };
+		2A1BE332130D610D00D5EB2C /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE330130D610D00D5EB2C /* dsa_pub.pem */; };
+		2A1BE333130D610D00D5EB2C /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE331130D610D00D5EB2C /* Growl Registration Ticket.growlRegDict */; };
+		2A1BE335130D611600D5EB2C /* SoundNote.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE334130D611600D5EB2C /* SoundNote.icns */; };
+		2A1BE34A130D874A00D5EB2C /* MGMAccessibleWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BE349130D874A00D5EB2C /* MGMAccessibleWatcher.m */; };
+		2A1BE355130DC22D00D5EB2C /* MGMTrashWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BE354130DC22800D5EB2C /* MGMTrashWatcher.m */; };
+		2A1BE358130DC26000D5EB2C /* MGMPathSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1BE357130DC25900D5EB2C /* MGMPathSubscriber.m */; };
+		2A34E62611E237380032F02E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E62511E237380032F02E /* IOKit.framework */; };
+		2A34E68911E241CA0032F02E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E68811E241CA0032F02E /* SystemConfiguration.framework */; };
+		2A34E7DC11E276C80032F02E /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E7DB11E276C80032F02E /* IOBluetooth.framework */; };
+		2A34E89E11E286500032F02E /* GeckoReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E89C11E286500032F02E /* GeckoReporter.framework */; };
+		2A34E89F11E286500032F02E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E89D11E286500032F02E /* Sparkle.framework */; };
+		2A34E8A611E2866B0032F02E /* GeckoReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E89C11E286500032F02E /* GeckoReporter.framework */; };
+		2A34E8B411E286700032F02E /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34E89D11E286500032F02E /* Sparkle.framework */; };
+		2A38D00D130EF91B00E4B7F0 /* notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A38D00C130EF91B00E4B7F0 /* notes.rtf */; };
+		2A41FE12130C59D500DC45EB /* MGMKeyboardWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A41FE11130C59D500DC45EB /* MGMKeyboardWatcher.m */; };
+		2A41FE1B130C5FF100DC45EB /* MGMMouseWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A41FE1A130C5FF000DC45EB /* MGMMouseWatcher.m */; };
+		2A41FE27130C6B1400DC45EB /* MGMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A41FE26130C6B1300DC45EB /* MGMFileManager.m */; };
+		2A7B00E7130C1129004C4F91 /* MGMBluetoothWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7B00E6130C1129004C4F91 /* MGMBluetoothWatcher.m */; };
+		2A7B00EA130C1611004C4F91 /* MGMNetworkWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7B00E9130C1611004C4F91 /* MGMNetworkWatcher.m */; };
+		2A7B00ED130C374D004C4F91 /* MGMPowerWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7B00EC130C3744004C4F91 /* MGMPowerWatcher.m */; };
+		2A88CAAE130ACD000062A126 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88CAAD130ACD000062A126 /* Growl.framework */; };
+		2A88CAC1130AD6490062A126 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88CAAD130ACD000062A126 /* Growl.framework */; };
+		2A88CACA130AD7A10062A126 /* MGMApplicationWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CAC7130AD7A10062A126 /* MGMApplicationWatcher.m */; };
+		2A88CACB130AD7A10062A126 /* MGMDisplayWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CAC9130AD7A10062A126 /* MGMDisplayWatcher.m */; };
+		2A88CACD130AD7F10062A126 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88CACC130AD7F10062A126 /* Carbon.framework */; };
+		2A88CAD0130AE4050062A126 /* MGMVolumeWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CACF130AE4030062A126 /* MGMVolumeWatcher.m */; };
+		2A88CAE5130AFFCF0062A126 /* MGMITunesWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CAE4130AFFBF0062A126 /* MGMITunesWatcher.m */; };
+		2A88CB0D130B071B0062A126 /* EyeTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88CB0C130B071B0062A126 /* EyeTunes.framework */; };
+		2A88CB0E130B07230062A126 /* EyeTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88CB0C130B071B0062A126 /* EyeTunes.framework */; };
+		2A88CB17130B0B4E0062A126 /* MGMUSBWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CB16130B0B3A0062A126 /* MGMUSBWatcher.m */; };
+		2A88CB1A130B1A170062A126 /* MGMFireWireWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A88CB19130B19EE0062A126 /* MGMFireWireWatcher.m */; };
+		2A8D3F9B1313F037007B58BD /* MGMMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D3F991313F037007B58BD /* MGMMD5.m */; };
+		2AC474A51312AC2800CAD248 /* AirPort.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4749E1312AC2800CAD248 /* AirPort.png */; };
+		2AC474A61312AC2800CAD248 /* Battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC4749F1312AC2800CAD248 /* Battery.png */; };
+		2AC474A71312AC2800CAD248 /* BatteryCharging.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC474A01312AC2800CAD248 /* BatteryCharging.png */; };
+		2AC474A81312AC2800CAD248 /* Bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC474A11312AC2800CAD248 /* Bluetooth.png */; };
+		2AC474A91312AC2800CAD248 /* Ethernet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC474A21312AC2800CAD248 /* Ethernet.png */; };
+		2AC474AA1312AC2800CAD248 /* FireWire.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC474A31312AC2800CAD248 /* FireWire.png */; };
+		2AC474AB1312AC2800CAD248 /* USB.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AC474A41312AC2800CAD248 /* USB.png */; };
+		2AEEB44F130AB96E003371B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEB449130AB96E003371B0 /* main.m */; };
+		2AEEB450130AB96E003371B0 /* MGMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEB44B130AB96E003371B0 /* MGMController.m */; };
+		2AEEB451130AB96E003371B0 /* MGMLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEB44D130AB96E003371B0 /* MGMLoginItems.m */; };
+		2AEEB459130AB975003371B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEEB453130AB975003371B0 /* InfoPlist.strings */; };
+		2AEEB45A130AB975003371B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEEB455130AB975003371B0 /* MainMenu.xib */; };
+		2AEEB45F130AC0A8003371B0 /* MGMSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEEB45E130AC0A8003371B0 /* MGMSound.m */; };
+		2AEEB463130AC4D5003371B0 /* Instructions.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEEB462130AC4D5003371B0 /* Instructions.rtf */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A88CB03130B06900062A126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A88CAFE130B066C0062A126;
+			remoteInfo = "Build Directory";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A34E8E211E2867E0032F02E /* Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A88CB0E130B07230062A126 /* EyeTunes.framework in Frameworks */,
+				2A88CAC1130AD6490062A126 /* Growl.framework in Frameworks */,
+				2A34E8B411E286700032F02E /* Sparkle.framework in Frameworks */,
+				2A34E8A611E2866B0032F02E /* GeckoReporter.framework in Frameworks */,
+			);
+			name = Frameworks;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2A1BE326130D565400D5EB2C /* disabled.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = disabled.plist; sourceTree = "<group>"; };
+		2A1BE328130D577800D5EB2C /* growl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = growl.plist; sourceTree = "<group>"; };
+		2A1BE330130D610D00D5EB2C /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		2A1BE331130D610D00D5EB2C /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		2A1BE334130D611600D5EB2C /* SoundNote.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SoundNote.icns; sourceTree = SOURCE_ROOT; };
+		2A1BE348130D874A00D5EB2C /* MGMAccessibleWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMAccessibleWatcher.h; sourceTree = "<group>"; };
+		2A1BE349130D874A00D5EB2C /* MGMAccessibleWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMAccessibleWatcher.m; sourceTree = "<group>"; };
+		2A1BE353130DC22700D5EB2C /* MGMTrashWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMTrashWatcher.h; sourceTree = "<group>"; };
+		2A1BE354130DC22800D5EB2C /* MGMTrashWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMTrashWatcher.m; sourceTree = "<group>"; };
+		2A1BE356130DC25200D5EB2C /* MGMPathSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMPathSubscriber.h; sourceTree = "<group>"; };
+		2A1BE357130DC25900D5EB2C /* MGMPathSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMPathSubscriber.m; sourceTree = "<group>"; };
+		2A34E62511E237380032F02E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		2A34E68811E241CA0032F02E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2A34E7DB11E276C80032F02E /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		2A34E89C11E286500032F02E /* GeckoReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeckoReporter.framework; path = Frameworks/GeckoReporter.framework; sourceTree = "<group>"; };
+		2A34E89D11E286500032F02E /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		2A38D00C130EF91B00E4B7F0 /* notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = notes.rtf; sourceTree = "<group>"; };
+		2A41FE10130C59D500DC45EB /* MGMKeyboardWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMKeyboardWatcher.h; sourceTree = "<group>"; };
+		2A41FE11130C59D500DC45EB /* MGMKeyboardWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMKeyboardWatcher.m; sourceTree = "<group>"; };
+		2A41FE19130C5FEF00DC45EB /* MGMMouseWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMMouseWatcher.h; sourceTree = "<group>"; };
+		2A41FE1A130C5FF000DC45EB /* MGMMouseWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMMouseWatcher.m; sourceTree = "<group>"; };
+		2A41FE25130C6B1300DC45EB /* MGMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMFileManager.h; sourceTree = "<group>"; };
+		2A41FE26130C6B1300DC45EB /* MGMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMFileManager.m; sourceTree = "<group>"; };
+		2A7B00E5130C1129004C4F91 /* MGMBluetoothWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMBluetoothWatcher.h; sourceTree = "<group>"; };
+		2A7B00E6130C1129004C4F91 /* MGMBluetoothWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMBluetoothWatcher.m; sourceTree = "<group>"; };
+		2A7B00E8130C1611004C4F91 /* MGMNetworkWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMNetworkWatcher.h; sourceTree = "<group>"; };
+		2A7B00E9130C1611004C4F91 /* MGMNetworkWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMNetworkWatcher.m; sourceTree = "<group>"; };
+		2A7B00EB130C373E004C4F91 /* MGMPowerWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMPowerWatcher.h; sourceTree = "<group>"; };
+		2A7B00EC130C3744004C4F91 /* MGMPowerWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMPowerWatcher.m; sourceTree = "<group>"; };
+		2A88CAAD130ACD000062A126 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Frameworks/Growl.framework; sourceTree = "<group>"; };
+		2A88CAC6130AD7A10062A126 /* MGMApplicationWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMApplicationWatcher.h; sourceTree = "<group>"; };
+		2A88CAC7130AD7A10062A126 /* MGMApplicationWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMApplicationWatcher.m; sourceTree = "<group>"; };
+		2A88CAC8130AD7A10062A126 /* MGMDisplayWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMDisplayWatcher.h; sourceTree = "<group>"; };
+		2A88CAC9130AD7A10062A126 /* MGMDisplayWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMDisplayWatcher.m; sourceTree = "<group>"; };
+		2A88CACC130AD7F10062A126 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = ../../../System/Library/Frameworks/Carbon.framework; sourceTree = "<group>"; };
+		2A88CACE130AE4010062A126 /* MGMVolumeWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMVolumeWatcher.h; sourceTree = "<group>"; };
+		2A88CACF130AE4030062A126 /* MGMVolumeWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMVolumeWatcher.m; sourceTree = "<group>"; };
+		2A88CAE3130AFFBA0062A126 /* MGMITunesWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMITunesWatcher.h; sourceTree = "<group>"; };
+		2A88CAE4130AFFBF0062A126 /* MGMITunesWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMITunesWatcher.m; sourceTree = "<group>"; };
+		2A88CB0C130B071B0062A126 /* EyeTunes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EyeTunes.framework; path = Frameworks/EyeTunes.framework; sourceTree = "<group>"; };
+		2A88CB15130B0B370062A126 /* MGMUSBWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMUSBWatcher.h; sourceTree = "<group>"; };
+		2A88CB16130B0B3A0062A126 /* MGMUSBWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMUSBWatcher.m; sourceTree = "<group>"; };
+		2A88CB18130B19DA0062A126 /* MGMFireWireWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMFireWireWatcher.h; sourceTree = "<group>"; };
+		2A88CB19130B19EE0062A126 /* MGMFireWireWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMFireWireWatcher.m; sourceTree = "<group>"; };
+		2A8D3F981313F037007B58BD /* MGMMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMMD5.h; sourceTree = "<group>"; };
+		2A8D3F991313F037007B58BD /* MGMMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMMD5.m; sourceTree = "<group>"; };
+		2A8D3F9A1313F037007B58BD /* MGMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMTypes.h; sourceTree = "<group>"; };
+		2AC4749E1312AC2800CAD248 /* AirPort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPort.png; sourceTree = "<group>"; };
+		2AC4749F1312AC2800CAD248 /* Battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Battery.png; sourceTree = "<group>"; };
+		2AC474A01312AC2800CAD248 /* BatteryCharging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BatteryCharging.png; sourceTree = "<group>"; };
+		2AC474A11312AC2800CAD248 /* Bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bluetooth.png; sourceTree = "<group>"; };
+		2AC474A21312AC2800CAD248 /* Ethernet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ethernet.png; sourceTree = "<group>"; };
+		2AC474A31312AC2800CAD248 /* FireWire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireWire.png; sourceTree = "<group>"; };
+		2AC474A41312AC2800CAD248 /* USB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USB.png; sourceTree = "<group>"; };
+		2AEEB449130AB96E003371B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = "<group>"; };
+		2AEEB44A130AB96E003371B0 /* MGMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMController.h; sourceTree = "<group>"; };
+		2AEEB44B130AB96E003371B0 /* MGMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMController.m; sourceTree = "<group>"; };
+		2AEEB44C130AB96E003371B0 /* MGMLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMLoginItems.h; sourceTree = "<group>"; };
+		2AEEB44D130AB96E003371B0 /* MGMLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMLoginItems.m; sourceTree = "<group>"; };
+		2AEEB44E130AB96E003371B0 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Classes/prefix.pch; sourceTree = "<group>"; };
+		2AEEB454130AB975003371B0 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AEEB456130AB975003371B0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2AEEB457130AB975003371B0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AEEB45D130AC0A8003371B0 /* MGMSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMSound.h; sourceTree = "<group>"; };
+		2AEEB45E130AC0A8003371B0 /* MGMSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMSound.m; sourceTree = "<group>"; };
+		2AEEB462130AC4D5003371B0 /* Instructions.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Instructions.rtf; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SoundNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				2A34E62611E237380032F02E /* IOKit.framework in Frameworks */,
+				2A34E68911E241CA0032F02E /* SystemConfiguration.framework in Frameworks */,
+				2A34E7DC11E276C80032F02E /* IOBluetooth.framework in Frameworks */,
+				2A34E89E11E286500032F02E /* GeckoReporter.framework in Frameworks */,
+				2A34E89F11E286500032F02E /* Sparkle.framework in Frameworks */,
+				2A88CAAE130ACD000062A126 /* Growl.framework in Frameworks */,
+				2A88CACD130AD7F10062A126 /* Carbon.framework in Frameworks */,
+				2A88CB0D130B071B0062A126 /* EyeTunes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A88CB0C130B071B0062A126 /* EyeTunes.framework */,
+				2A88CACC130AD7F10062A126 /* Carbon.framework */,
+				2A34E89C11E286500032F02E /* GeckoReporter.framework */,
+				2A88CAAD130ACD000062A126 /* Growl.framework */,
+				2A34E89D11E286500032F02E /* Sparkle.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				2A34E62511E237380032F02E /* IOKit.framework */,
+				2A34E68811E241CA0032F02E /* SystemConfiguration.framework */,
+				2A34E7DB11E276C80032F02E /* IOBluetooth.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SoundNote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SoundNote */ = {
+			isa = PBXGroup;
+			children = (
+				2AEEB448130AB96E003371B0 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				2AEEB452130AB975003371B0 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = SoundNote;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2AEEB449130AB96E003371B0 /* main.m */,
+				2AEEB44E130AB96E003371B0 /* prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A88CAC5130AD7A10062A126 /* Watchers */ = {
+			isa = PBXGroup;
+			children = (
+				2A88CAC6130AD7A10062A126 /* MGMApplicationWatcher.h */,
+				2A88CAC7130AD7A10062A126 /* MGMApplicationWatcher.m */,
+				2A88CAC8130AD7A10062A126 /* MGMDisplayWatcher.h */,
+				2A88CAC9130AD7A10062A126 /* MGMDisplayWatcher.m */,
+				2A88CACE130AE4010062A126 /* MGMVolumeWatcher.h */,
+				2A88CACF130AE4030062A126 /* MGMVolumeWatcher.m */,
+				2A88CAE3130AFFBA0062A126 /* MGMITunesWatcher.h */,
+				2A88CAE4130AFFBF0062A126 /* MGMITunesWatcher.m */,
+				2A88CB15130B0B370062A126 /* MGMUSBWatcher.h */,
+				2A88CB16130B0B3A0062A126 /* MGMUSBWatcher.m */,
+				2A88CB18130B19DA0062A126 /* MGMFireWireWatcher.h */,
+				2A88CB19130B19EE0062A126 /* MGMFireWireWatcher.m */,
+				2A7B00E5130C1129004C4F91 /* MGMBluetoothWatcher.h */,
+				2A7B00E6130C1129004C4F91 /* MGMBluetoothWatcher.m */,
+				2A7B00E8130C1611004C4F91 /* MGMNetworkWatcher.h */,
+				2A7B00E9130C1611004C4F91 /* MGMNetworkWatcher.m */,
+				2A7B00EB130C373E004C4F91 /* MGMPowerWatcher.h */,
+				2A7B00EC130C3744004C4F91 /* MGMPowerWatcher.m */,
+				2A41FE10130C59D500DC45EB /* MGMKeyboardWatcher.h */,
+				2A41FE11130C59D500DC45EB /* MGMKeyboardWatcher.m */,
+				2A41FE19130C5FEF00DC45EB /* MGMMouseWatcher.h */,
+				2A41FE1A130C5FF000DC45EB /* MGMMouseWatcher.m */,
+				2A1BE348130D874A00D5EB2C /* MGMAccessibleWatcher.h */,
+				2A1BE349130D874A00D5EB2C /* MGMAccessibleWatcher.m */,
+				2A1BE353130DC22700D5EB2C /* MGMTrashWatcher.h */,
+				2A1BE354130DC22800D5EB2C /* MGMTrashWatcher.m */,
+			);
+			path = Watchers;
+			sourceTree = "<group>";
+		};
+		2AEEB448130AB96E003371B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2AEEB44A130AB96E003371B0 /* MGMController.h */,
+				2AEEB44B130AB96E003371B0 /* MGMController.m */,
+				2A41FE25130C6B1300DC45EB /* MGMFileManager.h */,
+				2A41FE26130C6B1300DC45EB /* MGMFileManager.m */,
+				2AEEB44C130AB96E003371B0 /* MGMLoginItems.h */,
+				2AEEB44D130AB96E003371B0 /* MGMLoginItems.m */,
+				2A1BE356130DC25200D5EB2C /* MGMPathSubscriber.h */,
+				2A1BE357130DC25900D5EB2C /* MGMPathSubscriber.m */,
+				2AEEB45D130AC0A8003371B0 /* MGMSound.h */,
+				2AEEB45E130AC0A8003371B0 /* MGMSound.m */,
+				2A8D3F981313F037007B58BD /* MGMMD5.h */,
+				2A8D3F991313F037007B58BD /* MGMMD5.m */,
+				2A8D3F9A1313F037007B58BD /* MGMTypes.h */,
+				2A88CAC5130AD7A10062A126 /* Watchers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2AEEB452130AB975003371B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2AEEB453130AB975003371B0 /* InfoPlist.strings */,
+				2A1BE334130D611600D5EB2C /* SoundNote.icns */,
+				2A1BE330130D610D00D5EB2C /* dsa_pub.pem */,
+				2A1BE331130D610D00D5EB2C /* Growl Registration Ticket.growlRegDict */,
+				2AEEB455130AB975003371B0 /* MainMenu.xib */,
+				2AEEB457130AB975003371B0 /* Info.plist */,
+				2AC4749E1312AC2800CAD248 /* AirPort.png */,
+				2AC4749F1312AC2800CAD248 /* Battery.png */,
+				2AC474A01312AC2800CAD248 /* BatteryCharging.png */,
+				2AC474A11312AC2800CAD248 /* Bluetooth.png */,
+				2AC474A21312AC2800CAD248 /* Ethernet.png */,
+				2AC474A31312AC2800CAD248 /* FireWire.png */,
+				2AC474A41312AC2800CAD248 /* USB.png */,
+				2AEEB462130AC4D5003371B0 /* Instructions.rtf */,
+				2A1BE326130D565400D5EB2C /* disabled.plist */,
+				2A1BE328130D577800D5EB2C /* growl.plist */,
+				2A38D00C130EF91B00E4B7F0 /* notes.rtf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* SoundNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SoundNote" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				2A34E8E211E2867E0032F02E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A88CB04130B06900062A126 /* PBXTargetDependency */,
+			);
+			name = SoundNote;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SoundNote;
+			productReference = 8D1107320486CEB800E47090 /* SoundNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoundNote" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SoundNote */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SoundNote */,
+				2A88CAFE130B066C0062A126 /* Build Directory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEEB459130AB975003371B0 /* InfoPlist.strings in Resources */,
+				2AEEB45A130AB975003371B0 /* MainMenu.xib in Resources */,
+				2AEEB463130AC4D5003371B0 /* Instructions.rtf in Resources */,
+				2A1BE327130D565400D5EB2C /* disabled.plist in Resources */,
+				2A1BE329130D577800D5EB2C /* growl.plist in Resources */,
+				2A1BE332130D610D00D5EB2C /* dsa_pub.pem in Resources */,
+				2A1BE333130D610D00D5EB2C /* Growl Registration Ticket.growlRegDict in Resources */,
+				2A1BE335130D611600D5EB2C /* SoundNote.icns in Resources */,
+				2A38D00D130EF91B00E4B7F0 /* notes.rtf in Resources */,
+				2AC474A51312AC2800CAD248 /* AirPort.png in Resources */,
+				2AC474A61312AC2800CAD248 /* Battery.png in Resources */,
+				2AC474A71312AC2800CAD248 /* BatteryCharging.png in Resources */,
+				2AC474A81312AC2800CAD248 /* Bluetooth.png in Resources */,
+				2AC474A91312AC2800CAD248 /* Ethernet.png in Resources */,
+				2AC474AA1312AC2800CAD248 /* FireWire.png in Resources */,
+				2AC474AB1312AC2800CAD248 /* USB.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A88CB02130B067A0062A126 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$SRCROOT/build\" != \"$SYMROOT\" ]; then\n\tif [ -d \"$SRCROOT/build\" ]; then\n\t\t/bin/rm -Rf \"$SRCROOT/build\"\n\tfi\n\t/bin/ln -fs \"$SYMROOT\" \"$SRCROOT/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEEB44F130AB96E003371B0 /* main.m in Sources */,
+				2AEEB450130AB96E003371B0 /* MGMController.m in Sources */,
+				2AEEB451130AB96E003371B0 /* MGMLoginItems.m in Sources */,
+				2AEEB45F130AC0A8003371B0 /* MGMSound.m in Sources */,
+				2A88CACA130AD7A10062A126 /* MGMApplicationWatcher.m in Sources */,
+				2A88CACB130AD7A10062A126 /* MGMDisplayWatcher.m in Sources */,
+				2A88CAD0130AE4050062A126 /* MGMVolumeWatcher.m in Sources */,
+				2A88CAE5130AFFCF0062A126 /* MGMITunesWatcher.m in Sources */,
+				2A88CB17130B0B4E0062A126 /* MGMUSBWatcher.m in Sources */,
+				2A88CB1A130B1A170062A126 /* MGMFireWireWatcher.m in Sources */,
+				2A7B00E7130C1129004C4F91 /* MGMBluetoothWatcher.m in Sources */,
+				2A7B00EA130C1611004C4F91 /* MGMNetworkWatcher.m in Sources */,
+				2A7B00ED130C374D004C4F91 /* MGMPowerWatcher.m in Sources */,
+				2A41FE12130C59D500DC45EB /* MGMKeyboardWatcher.m in Sources */,
+				2A41FE1B130C5FF100DC45EB /* MGMMouseWatcher.m in Sources */,
+				2A41FE27130C6B1400DC45EB /* MGMFileManager.m in Sources */,
+				2A1BE34A130D874A00D5EB2C /* MGMAccessibleWatcher.m in Sources */,
+				2A1BE355130DC22D00D5EB2C /* MGMTrashWatcher.m in Sources */,
+				2A1BE358130DC26000D5EB2C /* MGMPathSubscriber.m in Sources */,
+				2A8D3F9B1313F037007B58BD /* MGMMD5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A88CB04130B06900062A126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A88CAFE130B066C0062A126 /* Build Directory */;
+			targetProxy = 2A88CB03130B06900062A126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AEEB453130AB975003371B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AEEB454130AB975003371B0 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2AEEB455130AB975003371B0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AEEB456130AB975003371B0 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A88CB00130B066C0062A126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A88CB01130B066C0062A126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				PRODUCT_NAME = SoundNote;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				PRODUCT_NAME = SoundNote;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "ppc i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "ppc i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A88CAFF130B066C0062A126 /* Build configuration list for PBXAggregateTarget "Build Directory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A88CB00130B066C0062A126 /* Debug */,
+				2A88CB01130B066C0062A126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SoundNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoundNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

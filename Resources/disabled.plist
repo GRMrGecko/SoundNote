@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accessible</key>
+	<true/>
+	<key>application</key>
+	<false/>
+	<key>bluetooth</key>
+	<false/>
+	<key>display</key>
+	<false/>
+	<key>itunes</key>
+	<false/>
+	<key>keyboard</key>
+	<true/>
+	<key>mouse</key>
+	<true/>
+	<key>network</key>
+	<false/>
+	<key>power</key>
+	<false/>
+	<key>usb</key>
+	<false/>
+	<key>volume</key>
+	<false/>
+	<key>trash</key>
+	<true/>
+</dict>
+</plist>

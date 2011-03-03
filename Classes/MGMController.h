@@ -19,6 +19,8 @@ extern NSString * const MGMNIcon;
 extern NSString * const MGMNSound;
 extern NSString * const MGMNTask;
 
+@protocol NSWindowDelegate;
+
 @interface MGMController : NSObject <NSWindowDelegate> {
 	NSWindow *instructions;
 	

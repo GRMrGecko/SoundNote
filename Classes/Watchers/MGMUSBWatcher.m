@@ -38,17 +38,6 @@ static NSString *nameForIOUSB(io_object_t object) {
 	
 	return @"Unnamed Device";
 }
-static NSString *idForIOUSB(io_object_t object) {
-	uint64_t ioDeviceID;
-	NSString *deviceID = nil;
-	kern_return_t result = IORegistryEntryGetRegistryEntryID(object, &ioDeviceID);
-	if (result==noErr)
-		deviceID = [NSString stringWithFormat:@"%11x", ioDeviceID];
-	if (deviceID!=nil)
-		return deviceID;
-	
-	return @"Unknown ID";
-}
 
 @implementation MGMUSBWatcher
 - (id)init {
@@ -66,9 +55,9 @@ static NSString *idForIOUSB(io_object_t object) {
 			NSLog(@"Unable to register for usb add %d", result);
 		io_object_t	object;
 		while ((object = IOIteratorNext(found))) {
-			NSString *deviceID = idForIOUSB(object);
-			if (![USBDevices containsObject:deviceID])
-				[USBDevices addObject:deviceID];
+			NSString *deviceName = nameForIOUSB(object);
+			if (![USBDevices containsObject:deviceName])
+				[USBDevices addObject:deviceName];
 			IOObjectRelease(object);
 		}
 		
@@ -78,9 +67,9 @@ static NSString *idForIOUSB(io_object_t object) {
 			NSLog(@"Unable to register for usb remove %d", result);
 		else {
 			while ((object = IOIteratorNext(found))) {
-				NSString *deviceID = idForIOUSB(object);
-				if ([USBDevices containsObject:deviceID])
-					[USBDevices removeObject:deviceID];
+				NSString *deviceName = nameForIOUSB(object);
+				if ([USBDevices containsObject:deviceName])
+					[USBDevices removeObject:deviceName];
 				IOObjectRelease(object);
 			}
 		}
@@ -97,17 +86,17 @@ static NSString *idForIOUSB(io_object_t object) {
 }
 
 - (void)usbDeviceConnected:(io_object_t)theDevice {
-	NSString *deviceID = idForIOUSB(theDevice);
-	if (![USBDevices containsObject:deviceID]) {
-		[USBDevices addObject:deviceID];
-		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"usbconnected", MGMNName, @"USB Connected", MGMNTitle, nameForIOUSB(theDevice), MGMNDescription, [NSImage imageNamed:@"USB"], MGMNIcon, nil]];
+	NSString *deviceName = nameForIOUSB(theDevice);
+	if (![USBDevices containsObject:deviceName]) {
+		[USBDevices addObject:deviceName];
+		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"usbconnected", MGMNName, @"USB Connected", MGMNTitle, deviceName, MGMNDescription, [NSImage imageNamed:@"USB"], MGMNIcon, nil]];
 	}
 }
 - (void)usbDeviceDisconnected:(io_object_t)theDevice {
-	NSString *deviceID = idForIOUSB(theDevice);
-	if ([USBDevices containsObject:deviceID]) {
-		[USBDevices removeObject:deviceID];
-		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"usbdisconnected", MGMNName, @"USB Disconnected", MGMNTitle, nameForIOUSB(theDevice), MGMNDescription, [NSImage imageNamed:@"USB"], MGMNIcon, nil]];
+	NSString *deviceName = nameForIOUSB(theDevice);
+	if ([USBDevices containsObject:deviceName]) {
+		[USBDevices removeObject:deviceName];
+		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"usbdisconnected", MGMNName, @"USB Disconnected", MGMNTitle, deviceName, MGMNDescription, [NSImage imageNamed:@"USB"], MGMNIcon, nil]];
 	}
 }
 @end

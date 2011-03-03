@@ -19,6 +19,8 @@
 - (void)soundDidFinishPlaying:(MGMSound *)theSound;
 @end
 
+@protocol NSSoundDelegate;
+
 @interface MGMSound : NSObject
 #if TARGET_OS_IPHONE
 <AVAudioPlayerDelegate>

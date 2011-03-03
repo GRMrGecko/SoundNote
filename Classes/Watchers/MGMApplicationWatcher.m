@@ -27,6 +27,8 @@ OSStatus frontAppChanged(EventHandlerCallRef nextHandler, EventRef theEvent, voi
     return (CallNextEventHandler(nextHandler, theEvent));
 }
 
+@class NSRunningApplication;
+
 @implementation MGMApplicationWatcher
 - (id)init {
 	if ((self = [super init])) {

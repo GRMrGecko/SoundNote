@@ -49,17 +49,6 @@ static NSString *nameForIOFW(io_object_t object) {
 	
 	return @"Unnamed Device";
 }
-static NSString *idForIOFW(io_object_t object) {
-	uint64_t ioDeviceID;
-	NSString *deviceID = nil;
-	kern_return_t result = IORegistryEntryGetRegistryEntryID(object, &ioDeviceID);
-	if (result==noErr)
-		deviceID = [NSString stringWithFormat:@"%11x", ioDeviceID];
-	if (deviceID!=nil)
-		return deviceID;
-	
-	return @"Unknown ID";
-}
 
 @implementation MGMFireWireWatcher
 - (id)init {
@@ -77,9 +66,9 @@ static NSString *idForIOFW(io_object_t object) {
 			NSLog(@"Unable to register for firewire add %d", result);
 		io_object_t	object;
 		while ((object = IOIteratorNext(found))) {
-			NSString *deviceID = idForIOFW(object);
-			if (![firewireDevices containsObject:deviceID])
-				[firewireDevices addObject:deviceID];
+			NSString *deviceName = nameForIOFW(object);
+			if (![firewireDevices containsObject:deviceName])
+				[firewireDevices addObject:deviceName];
 			IOObjectRelease(object);
 		}
 		
@@ -89,9 +78,9 @@ static NSString *idForIOFW(io_object_t object) {
 			NSLog(@"Unable to register for firewire remove %d", result);
 		else {
 			while ((object = IOIteratorNext(found))) {
-				NSString *deviceID = idForIOFW(object);
-				if ([firewireDevices containsObject:deviceID])
-					[firewireDevices removeObject:deviceID];
+				NSString *deviceName = nameForIOFW(object);
+				if ([firewireDevices containsObject:deviceName])
+					[firewireDevices removeObject:deviceName];
 				IOObjectRelease(object);
 			}
 		}
@@ -108,17 +97,17 @@ static NSString *idForIOFW(io_object_t object) {
 }
 
 - (void)firewireDeviceConnected:(io_object_t)theDevice {
-	NSString *deviceID = idForIOFW(theDevice);
-	if (![firewireDevices containsObject:deviceID]) {
-		[firewireDevices addObject:deviceID];
-		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"firewireconnected", MGMNName, @"FireWire Connected", MGMNTitle, nameForIOFW(theDevice), MGMNDescription, [NSImage imageNamed:@"FireWire"], MGMNIcon, nil]];
+	NSString *deviceName = nameForIOFW(theDevice);
+	if (![firewireDevices containsObject:deviceName]) {
+		[firewireDevices addObject:deviceName];
+		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"firewireconnected", MGMNName, @"FireWire Connected", MGMNTitle, deviceName, MGMNDescription, [NSImage imageNamed:@"FireWire"], MGMNIcon, nil]];
 	}
 }
 - (void)firewireDeviceDisconnected:(io_object_t)theDevice {
-	NSString *deviceID = idForIOFW(theDevice);
-	if ([firewireDevices containsObject:deviceID]) {
-		[firewireDevices removeObject:deviceID];
-		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"firewiredisconnected", MGMNName, @"FireWire Disconnected", MGMNTitle, nameForIOFW(theDevice), MGMNDescription, [NSImage imageNamed:@"FireWire"], MGMNIcon, nil]];
+	NSString *deviceName = nameForIOFW(theDevice);
+	if ([firewireDevices containsObject:deviceName]) {
+		[firewireDevices removeObject:deviceName];
+		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"firewiredisconnected", MGMNName, @"FireWire Disconnected", MGMNTitle, deviceName, MGMNDescription, [NSImage imageNamed:@"FireWire"], MGMNIcon, nil]];
 	}
 }
 @end

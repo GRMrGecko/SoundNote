@@ -179,8 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				2A34E62611E237380032F02E /* IOKit.framework in Frameworks */,
 				2A34E68911E241CA0032F02E /* SystemConfiguration.framework in Frameworks */,
+				2A34E62611E237380032F02E /* IOKit.framework in Frameworks */,
 				2A34E7DC11E276C80032F02E /* IOBluetooth.framework in Frameworks */,
 				2A34E89E11E286500032F02E /* GeckoReporter.framework in Frameworks */,
 				2A34E89F11E286500032F02E /* Sparkle.framework in Frameworks */,
@@ -514,6 +514,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
 				PRODUCT_NAME = SoundNote;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -533,6 +534,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
 				PRODUCT_NAME = SoundNote;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};

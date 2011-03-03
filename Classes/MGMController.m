@@ -43,7 +43,7 @@ NSString * const MGMVersion = @"MGMVersion";
 NSString * const MGMLaunchCount = @"MGMLaunchCount";
 
 NSString * const MGMApplicationSupportPath = @"~/Library/Application Support/MrGeckosMedia/SoundNote/";
-NSString * const MGMNotesName = @"notes.txt";
+NSString * const MGMNotesName = @"notes.rtf";
 NSString * const MGMGrowlName = @"growl.plist";
 NSString * const MGMDisabledName = @"disabled.plist";
 NSString * const MGMSoundEndedNotification = @"MGMSoundEndedNotification";
@@ -103,15 +103,15 @@ static MGMController *MGMSharedController;
 	
 	NSFileManager *manager = [NSFileManager defaultManager];
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	if ([defaults objectForKey:MGMVersion]==nil) {
+	if ([defaults objectForKey:MGMVersion]==nil || [[defaults objectForKey:MGMVersion] isEqual:@"0.2"]) {
 		if ([manager fileExistsAtPath:[MGMApplicationSupportPath stringByExpandingTildeInPath]]) {
 			[manager copyItemAtPath:[[NSBundle mainBundle] pathForResource:[MGMNotesName stringByDeletingPathExtension] ofType:[MGMNotesName pathExtension]] toPath:[[MGMApplicationSupportPath stringByExpandingTildeInPath] stringByAppendingPathComponent:MGMNotesName]];
 			[manager copyItemAtPath:[[NSBundle mainBundle] pathForResource:[MGMGrowlName stringByDeletingPathExtension] ofType:[MGMGrowlName pathExtension]] toPath:[[MGMApplicationSupportPath stringByExpandingTildeInPath] stringByAppendingPathComponent:MGMGrowlName]];
 			[manager copyItemAtPath:[[NSBundle mainBundle] pathForResource:[MGMDisabledName stringByDeletingPathExtension] ofType:[MGMDisabledName pathExtension]] toPath:[[MGMApplicationSupportPath stringByExpandingTildeInPath] stringByAppendingPathComponent:MGMDisabledName]];
 			[manager removeItemAtPath:[[MGMApplicationSupportPath stringByExpandingTildeInPath] stringByAppendingPathComponent:@"note.txt"]];
 			[self showInstructions];
-			[defaults setObject:[[MGMSystemInfo info] applicationVersion] forKey:MGMVersion];
 		}
+		[defaults setObject:[[MGMSystemInfo info] applicationVersion] forKey:MGMVersion];
 	}
 	[self registerDefaults];
 	if (![manager fileExistsAtPath:[MGMApplicationSupportPath stringByExpandingTildeInPath]]) {

@@ -88,8 +88,8 @@ static void receivedNotification(AXObserverRef observer, AXUIElementRef element,
 				[self observe:kAXMenuOpenedNotification element:element observer:observer application:theApplication];
 				[self observe:kAXMenuClosedNotification element:element observer:observer application:theApplication];
 				[self observe:kAXMenuItemSelectedNotification element:element observer:observer application:theApplication];
-				[self observe:kAXRowExpandedNotification element:element observer:observer application:theApplication];
-				[self observe:kAXRowCollapsedNotification element:element observer:observer application:theApplication];
+				[self observe:CFSTR("AXRowExpanded") element:element observer:observer application:theApplication];
+				[self observe:CFSTR("AXRowCollapsed") element:element observer:observer application:theApplication];
 				[self observe:kAXSelectedRowsChangedNotification element:element observer:observer application:theApplication];
 				if (![[MGMSystemInfo info] isAfterSnowLeopard]) {
 					[self observe:kAXApplicationHiddenNotification element:element observer:observer application:theApplication];
@@ -145,9 +145,9 @@ static void receivedNotification(AXObserverRef observer, AXUIElementRef element,
 		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"menuitemselected", MGMNName, @"Menu Item Selected", MGMNTitle, [NSString stringWithFormat:@"%@ in %@", (NSString *)title, [information objectForKey:(NSString *)kCFBundleNameKey]], MGMNDescription, [[NSWorkspace sharedWorkspace] iconForFile:[information objectForKey:MGMBundlePath]], MGMNIcon, nil]];
 		if (title!=NULL)
 			CFRelease(title);
-	} else if ([theName isEqual:(NSString *)kAXRowExpandedNotification]) {
+	} else if ([theName isEqual:@"AXRowExpanded"]) {
 		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"rowexpanded", MGMNName, @"Row Expanded", MGMNTitle, [information objectForKey:(NSString *)kCFBundleNameKey], MGMNDescription, [[NSWorkspace sharedWorkspace] iconForFile:[information objectForKey:MGMBundlePath]], MGMNIcon, nil]];
-	} else if ([theName isEqual:(NSString *)kAXRowCollapsedNotification]) {
+	} else if ([theName isEqual:@"AXRowCollapsed"]) {
 		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"rowcollapsed", MGMNName, @"Row Collapsed", MGMNTitle, [information objectForKey:(NSString *)kCFBundleNameKey], MGMNDescription, [[NSWorkspace sharedWorkspace] iconForFile:[information objectForKey:MGMBundlePath]], MGMNIcon, nil]];
 	} else if ([theName isEqual:(NSString *)kAXSelectedRowsChangedNotification]) {
 		[[MGMController sharedController] startNotificationWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"selectedrowschanged", MGMNName, @"Selected Rows Changed", MGMNTitle, [information objectForKey:(NSString *)kCFBundleNameKey], MGMNDescription, [[NSWorkspace sharedWorkspace] iconForFile:[information objectForKey:MGMBundlePath]], MGMNIcon, nil]];
